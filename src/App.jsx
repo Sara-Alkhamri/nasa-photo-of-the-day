@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./App.css";
-import "./index.scss";
+import "./App.scss";
+import "./index.css";
 
 //import components
 
