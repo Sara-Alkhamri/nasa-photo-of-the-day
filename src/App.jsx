@@ -4,29 +4,29 @@ import "./App.css";
 import "./index.css";
 
 //Import components
-import Header from './components/Header';
+
 import Content from './components/Content';
-import Footer from './components/Footer';
+
 
 function App() {
-  const  [maincard, setMainCard] = useState();
+  const  [mainCard, setMainCard] = useState();
   useEffect(() => {
     axios 
       .get (`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
       .then(response => {
-        console.log(response);
+        // console.log(response.data);
+        const card = response.data;
+        setMainCard(card);
       })
   }, [])
   
-  
+  console.log(mainCard);
+  if (!mainCard) return <h3>Loading...</h3>;
   return (
 
 
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <Content img={mainCard.hdurl} h1={mainCard.title} p={mainCard.explanation} date={mainCard.date}/>
     </div>
   );
 }
