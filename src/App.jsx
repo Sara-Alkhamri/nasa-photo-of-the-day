@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
-import "./index.css";
+import "./index.scss";
 
-//Import components
+//import components
 
 import Content from './components/Content';
-
 
 function App() {
   const  [mainCard, setMainCard] = useState();
@@ -19,16 +18,16 @@ function App() {
         setMainCard(card);
       })
   }, [])
-  
   console.log(mainCard);
+
   if (!mainCard) return <h3>Loading...</h3>;
   return (
-
-
     <div className="App">
       <Content img={mainCard.hdurl} h1={mainCard.title} p={mainCard.explanation} date={mainCard.date}/>
     </div>
   );
 }
 
-export default App;
+export default App;   
+
+
