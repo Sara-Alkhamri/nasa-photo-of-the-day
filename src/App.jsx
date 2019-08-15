@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.scss";
 import "./index.css";
+import styled from "styled-components";
 
 //import components
 
