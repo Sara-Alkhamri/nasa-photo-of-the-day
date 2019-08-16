@@ -6,7 +6,6 @@ import "./index.css";
 
 
 //import components
-
 import Content from './components/Content';
 
 

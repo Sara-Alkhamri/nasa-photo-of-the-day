@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import App from "../App";
 
 //styling
 
@@ -17,21 +18,20 @@ const Button = styled.button`
 
 const Title = styled.h1`
 color: black;
+border-bottom: 1px dashed lightgray;
 `
 const Info = styled.p`
 
 text-align: center;
-color: skyblue;
+color: gray;
 `
 const Date = styled.p`
-
-color: blue;
+color: skyblue;
 font-size: 15px;
 `
-
 const Image = styled.img`
-
 width: 800px;
+border-radius: 80px;
 
 `
 function Content(props) {
@@ -40,11 +40,11 @@ function Content(props) {
     
     return (
         
-        <div className="mainContent">
-            <Image className="mainImg" src={props.img}/>
+        <div>
+            <Image className="mainImg" src={props.img}/> 
             <Title>{props.h1}</Title>
-            <Info>{props.p}</Info>
             <Date>{props.date}</Date>
+            <Info>{props.p}</Info>
             <Button >Enter</Button>
         </div>
     )
