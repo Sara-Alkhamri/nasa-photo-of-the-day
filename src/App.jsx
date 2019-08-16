@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.scss";
 import "./index.css";
-import styled from "styled-components";
+
+
 
 //import components
 
 import Content from './components/Content';
+
 
 function App() {
   const  [mainCard, setMainCard] = useState();
@@ -18,6 +20,9 @@ function App() {
         const card = response.data;
         setMainCard(card);
       })
+      .catch(err => {
+        console.log(err)
+      }) 
   }, [])
   console.log(mainCard);
 
