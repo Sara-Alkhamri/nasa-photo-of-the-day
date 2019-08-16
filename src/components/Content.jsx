@@ -16,8 +16,7 @@ const Button = styled.button`
 `;
 
 const Title = styled.h1`
-
-color: red;
+color: black;
 `
 const Info = styled.p`
 
