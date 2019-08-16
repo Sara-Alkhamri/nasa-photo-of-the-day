@@ -21,7 +21,6 @@ color: black;
 border-bottom: 1px dashed lightgray;
 `
 const Info = styled.p`
-
 text-align: center;
 color: gray;
 `
